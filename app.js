@@ -16,13 +16,22 @@ app.use(express.static('public'))
 // set up routers
 app.get('/', (req, res) => {
   res.render('index', { style: "index.css", restaurants: restaurants.results })
-})
+})  //index page
 
 app.get('/restaurants/:id', (req, res) => {
   const restaurant = restaurants.results.find(restaurant => restaurant.id.toString() === req.params.id)
   res.render('show', {
     restaurant: restaurant,
     style: "show.css"
+  })
+})  //show page
+
+app.get('/search', (req, res) => {
+  const keyword = req.query.keyword
+  const restaurant = restaurants.results.filter(restaurant => restaurant.name.toLowerCase().includes(keyword.toLowerCase()))
+  res.render('index', {
+    restaurants: restaurant,
+    style: "index.css"
   })
 })
 
