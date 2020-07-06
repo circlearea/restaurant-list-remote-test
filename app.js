@@ -1,21 +1,21 @@
 // introduce framework
 const express = require('express') //express
 const exphbs = require('express-handlebars') //handlebars
-
+const restaurants = require('./restaurantList.json')//restaurant list
 
 // declare related variables
 const app = express()
 
-// 
+// set up template engine
 app.engine('handlebars', exphbs({ defaultLayout: "main" }))
 app.set('view engine', 'handlebars')
 
-// set up static folder
+// make a static folder
 app.use(express.static('public'))
 
 // set up routers
 app.get('/', (req, res) => {
-  res.render('index', { style: "index.css" })
+  res.render('index', { style: "index.css", restaurants: restaurants.results })
 })
 
 // server listening on port 3000
