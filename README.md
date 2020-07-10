@@ -1,6 +1,12 @@
 # Restaurant-list-remote-test
 **A simple web application for a favorite restaurant list.**
 
+`A small project for practice, not a tool`
+
+## Screenshot
+
+![Index](https://github.com/circlearea/restaurant-list-remote-test/tree/master/public/img/打造餐廳清單screenshot.png)
+
 ## Features
 * static restaurant list.
 * use keyword to search static restaurant list.
