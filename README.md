@@ -5,7 +5,7 @@
 
 ## Screenshot
 
-![Index](https://github.com/circlearea/restaurant-list-remote-test/tree/master/public/img/打造餐廳清單screenshot.png)
+![Index](https://github.com/circlearea/restaurant-list-remote-test/blob/master/public/img/restaurant_list_screenshot.png)
 
 ## Features
 * static restaurant list.
